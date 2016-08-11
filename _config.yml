@@ -1,0 +1,21 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           /:slug
+gems:                [jekyll-paginate]
+
+# Setup
+title:               Source Code Tales
+tagline:             "Tamás Szelei's coding blog"
+description:         "This is my programming-related blog; I post rarely, but I try and put lots of effort into my posts. I'm mainly focused on C++"
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              Tamás Szelei
+  url:               https://twitter.com/szeleitamas
+  email:             szelei.t@gmail.com
+
+# Custom vars
+version:             2.0.0
