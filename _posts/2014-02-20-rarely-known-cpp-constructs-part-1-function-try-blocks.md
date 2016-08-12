@@ -1,10 +1,10 @@
 ---
 layout: post
-title: cmake is not great, but it doesn’t matter
+title: "Rarely known C++ constructs (part 1): Function try blocks"
 author: Tamás Szelei
-github_link: https://github.com/sztomi/constexpr_murmurhash
-slug: cmake-is-not-great
-tags: c++ cmake placeholder
+github_link:
+slug: rarely-known-cpp-constructs-part-1-function-try-blocks
+tags: c++ placeholder
 ---
 
 ## This is a placeholder while I recover the content

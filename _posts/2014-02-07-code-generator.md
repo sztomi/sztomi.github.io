@@ -1,10 +1,10 @@
 ---
 layout: post
-title: cmake is not great, but it doesn’t matter
+title: Implementing a code generator with libclang
 author: Tamás Szelei
-github_link: https://github.com/sztomi/constexpr_murmurhash
-slug: cmake-is-not-great
-tags: c++ cmake placeholder
+github_link: https://github.com/sztomi/code-generator
+slug: code-generator
+tags: c++ clang python code-generation
 ---
 
 ## This is a placeholder while I recover the content

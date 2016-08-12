@@ -1,10 +1,10 @@
 ---
 layout: post
-title: cmake is not great, but it doesn’t matter
+title: Emulating the static initialization blocks of Java in C++
 author: Tamás Szelei
-github_link: https://github.com/sztomi/constexpr_murmurhash
-slug: cmake-is-not-great
-tags: c++ cmake placeholder
+github_link: https://github.com/sztomi/cpp-static-init-block
+slug: cpp-static-init-block
+tags: c++ placeholder
 ---
 
 ## This is a placeholder while I recover the content
