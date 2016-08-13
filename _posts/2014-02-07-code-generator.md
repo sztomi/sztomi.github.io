@@ -5,6 +5,7 @@ author: Tamás Szelei
 github_link: https://github.com/sztomi/code-generator
 slug: code-generator
 tags: c++ clang python code-generation
+disqus_page_id: szeleime/implementing_a_code_generator_for_c_with_libclang
 ---
 
 ## This is a placeholder while I recover the content
