@@ -327,6 +327,7 @@ a.sidebar-nav-item:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 /* Meta data line below post title */
