@@ -10,7 +10,7 @@ tagline:             "Tamás Szelei's coding blog"
 description:         "This is my programming-related blog; I post rarely, but I try and put lots of effort into my posts. I'm mainly focused on C++"
 baseurl:             ''
 paginate:            5
-excerpt_separator:   "<!-- more -->"
+excerpt_separator:   "-----"
 
 # About/contact
 author:

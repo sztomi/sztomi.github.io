@@ -11,7 +11,7 @@ C++14 [relaxed many restrictions](https://en.wikipedia.org/wiki/C%2B%2B14#Relaxe
 
 To prove this point, I tried and implemented Murmur3A, the Murmur3 hash variant which is optimized for x86[^1] and computes 32 bit hash values. In this post I’m going to walk through the steps of the implementation.
 
-<!-- more -->
+-----
 
 ## constexpr is relaxed, but not entirely
 
