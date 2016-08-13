@@ -570,7 +570,6 @@ a.pagination-item:hover {
 }
 
 .tags {
-  display: inline-flex;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -589,9 +588,9 @@ a.pagination-item:hover {
   display: inline-block;
   height: 26px;
   line-height: 26px;
-  padding: 0 20px 0 23px;
+  padding: 0 10px 0 23px;
   position: relative;
-  margin: 0 10px 0 0;
+  margin: 10px 10px 0 0;
   text-decoration: none;
 }
 

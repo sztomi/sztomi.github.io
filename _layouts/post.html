@@ -8,6 +8,12 @@ layout: default
     {{ content }}
 </div>
 
+<ul class="tags">
+    {% for tag in post.tags %}
+    <li><a href="{{ site.baseurl }}tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+    {% endfor %}
+</ul>
+
 <div class="related">
     <h2>Related Posts</h2>
     <ul class="related-posts">

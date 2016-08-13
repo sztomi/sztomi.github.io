@@ -10,6 +10,11 @@ title: Home
 
 		{{ post.excerpt }}
         <a class="continue-reading" href="{{ post.url }}" rel="bookmark" title="Permalink to {{ post.title }}">Continue Reading...</a>
+    <ul class="tags">
+        {% for tag in post.tags %}
+        <li><a href="{{ site.baseurl }}tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
 	</div>
 	{% endfor %}
 </div>
