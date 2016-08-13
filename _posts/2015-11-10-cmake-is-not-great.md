@@ -2,7 +2,7 @@
 layout: post
 title: cmake is not great, but it doesn’t matter
 author: Tamás Szelei
-github_link: https://github.com/sztomi/constexpr_murmurhash
+github_link:
 slug: cmake-is-not-great
 tags: c++ cmake placeholder
 ---
