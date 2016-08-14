@@ -421,7 +421,7 @@ At this point, the generated binding code is almost identical to what we wrote b
 
 ## Hiding non-public members
 
-Our example source only had public member functions. In a real-world scenario, this rarely happens. The code generator did not take *access specifiers* (public, private, protected) into account, but it would be very important to do so. The generated binding code would not compile if it would contain non-public members. Unfortunately, at the time this is written the Python bindings do not expose the access specifiers on the cursors. I recommend using [my patched cindex.py](https://gist.github.com/sztomi/9039902) to access this information6. The last revision of our `Class` constructor filters out the non-public members:
+Our example source only had public member functions. In a real-world scenario, this rarely happens. The code generator did not take *access specifiers* (public, private, protected) into account, but it would be very important to do so. The generated binding code would not compile if it would contain non-public members. Unfortunately, at the time this is written the Python bindings do not expose the access specifiers on the cursors. I recommend using [my patched cindex.py](https://gist.github.com/sztomi/9039902) to access this information[^6]. The last revision of our `Class` constructor filters out the non-public members:
 
 ```python
 class Class(object):
