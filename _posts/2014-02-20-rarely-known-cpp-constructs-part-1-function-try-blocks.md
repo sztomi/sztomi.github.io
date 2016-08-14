@@ -4,7 +4,7 @@ title: "Rarely known C++ constructs (part 1): Function try blocks"
 author: Tamás Szelei
 github_link:
 slug: rarely-known-cpp-constructs-part-1-function-try-blocks
-tags: c++ placeholder
+tags: c++
 disqus_page_id: szeleime/rarely_known_c_constructs_part_1_function_try_blocks_85
 ---
 
