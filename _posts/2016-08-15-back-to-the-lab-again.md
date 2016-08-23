@@ -14,6 +14,6 @@ to recreate (and the post wasn't so good anyway).
 Anyway, the blog is here again, hopefully Google forgives the downtime. I made sure to use the old
 links and put extra effort into having the old comments in place.
 
-The blog now runs on Github pages and is based on Jekyll. You can find the source here: https://github.com/sztomi/sztomi.github.io
+The blog now runs on Github pages and is based on Jekyll. You can find the source [here](https://github.com/sztomi/sztomi.github.io).
 
-Regarding my VPS service provider: let's just say, I won't be recommending [that company](http://virtora.com/) to anyone, anytime soon.
+Regarding my VPS service provider: let's just say, I won't be recommending that company to anyone, anytime soon.
