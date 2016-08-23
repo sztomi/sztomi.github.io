@@ -7,7 +7,7 @@ slug: introducing-rpclib
 tags: c++ rpclib projects
 ---
 
-The 361st commit in the [rpclib repository](https://github.com/rpclib/rpclib) marks the first public release of [rpclib](http://rpclib.net), the project I've been working for the last ~11 months (294 days, to be exact). What started off as *"throw this together in a month and then move on to the next thing"* became a crazy journey of perfectionism and *"I'll add this tiny feature before release because what would people thing if it's not there"*. Breaking and reworking things just for the sake of it. That's a great way to have a side project to *work on*, but not a great way to *finish it*.
+The 361st commit in the [rpclib repository](https://github.com/rpclib/rpclib) marks the first public release of [rpclib](http://rpclib.net), the project I've been working for the last ~11 months (294 days, to be exact). What started off as *"throw this together in a month and then move on to the next thing"* became a crazy journey of perfectionism and *"I'll add this tiny feature before release because what would people think if it's not there"*. Breaking and reworking things just for the sake of it. That's a great way to have a side project to *work on*, but not a great way to *finish it*.
 
 I realized this about a month and a half ago and since then, I've been working towards a complete
 state that I can release. Right now I'm minutes away from pushing the button to upload the
