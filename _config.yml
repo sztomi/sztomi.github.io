@@ -7,7 +7,7 @@ gems:                [jekyll-paginate]
 # Setup
 title:               Source Code Tales
 tagline:             "Tamás Szelei's coding blog"
-description:         "This is my programming-related blog; I post rarely, but I try and put lots of effort into my posts."
+description:         "This is my programming-related blog"
 baseurl:             ''
 paginate:            5
 excerpt_separator:   "-----"
