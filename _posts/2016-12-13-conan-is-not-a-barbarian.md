@@ -54,8 +54,11 @@ add_executable(timer timer.cpp)
 target_link_libraries(timer ${CONAN_LIBS})
 ```
 
-On top of that, conan also generates easily parsable txt files, so you can get
-away with minimal scripting if you use a build system not yet supported by
+The `conanbuildinfo.cmake` is what conan generates while performing `conan
+install` (because the cmake generator was added to the conanfile).
+
+On top of that, conan can also generate easily parsable txt files, so you can get
+away with minimal scripting if you use a build system not yet directly supported by
 conan.
 
 ## Packages on conan.io
@@ -67,8 +70,8 @@ soon as more and more people are starting to use it.
 
 ## They said I can be anything - so I became a package
 
-However, it's quite easy to create packages from git repos, and for whatever
-reason I found it also quite satisfying. There is something about "making it
+It's very easy to create packages from git repos, and for whatever
+reason I also found it quite satisfying. There is something about "making it
 click". 
 
 So don't be discouraged if you can't find your favorite package, spend
@@ -110,7 +113,7 @@ class CMark(ConanFile):
 ```
 
 I also found that you can pretty much *evolve* your conanfiles because as you
-are starting out and get a feel for packaging copying always a great way to reuse
+are starting out and get a feel for packaging, copying is always a great way to reuse
 the accumulated wisdom from the previous ones. 
 
 Since conanfiles are python sources, there's a great amount of freedom in
@@ -119,7 +122,7 @@ generating a package and building its contents.
 ## Sign me a river
 
 And here is my one issue with conan that I think needs to be resolved before it
-can really become mainstream. Package signing. Currently, if you want to be
+can really become mainstream. **Package signing**. Currently, if you want to be
 sure that you are not integrating malicious code into your builds, you will
 need to
 
