@@ -1,0 +1,15 @@
+{
+  "short_name": "NAG",
+  "name": "NAG Napló",
+  "icons": [
+    {
+      "src": "/brain.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/"
+}

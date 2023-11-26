@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CBT Thought Record Sheet</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/css/chevron-right.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/css/chevron-left.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/css/sync.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/css/pen.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/css/trash.css" rel="stylesheet" />
+        <link rel="icon" href="brain.png">
+        <link rel="manifest" href="/manifest.json">
+        <script src="./js/app.js"></script>
+        <style>
+.myicon {
+    line-height: 0.8;
+    display: inline-block;
+    margin: auto 0.3rem auto 0;
+    color: #06910d;
+    width: 14px;
+    height: 14px;
+}
+.notification-dot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+        </style>
+    </head>
+
+    <body x-data="app()", x-init="init()" x-ref="mainApp">
+
+        <main class="container hero is-fullheight-with-navbar">
+
+            <nav
+                class="navbar is-light is-spaced mb-5"
+                role="navigation"
+                aria-label="main navigation"
+                x-data="{ open: false }">
+                <div class="navbar-brand" :class="{ 'is-active': open }">
+                    <a class="navbar-item" href="/">
+                        <img src="brain.png" style="color: rgba(0,0,0,.7)">
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        :class="{ 'is-active': open }" @click="open = !open">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <div x-show="hasUpdate" class="notification-dot"></div>
+                    </a>
+                </div>
+
+                <div id="nav-items" class="navbar-menu" :class="{ 'is-active': open }">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="#" @click="refreshApp()" x-show="hasUpdate">
+                            <i class="gg-sync myicon"></i>App frissítése
+                        </a>
+                        <a class="navbar-item" href="#" @click="goToHelpView()">
+                            Mi ez?
+                        </a>
+                        <a class="navbar-item" href="">
+                            Exportálás
+                        </a>
+
+                    </div>
+                </div>
+
+            </nav>
+
+            <template x-if="view === 'list'">
+                <article class="section">
+                    <div class="block">
+                        <a class="button is-primary is-fullwidth" @click="goToAddView()">Új bejegyzés</a>
+                    </div>
+                    <div class="block">
+                        <button class="button is-fullwidth is-success" @click="exportData()">Export</button>
+                    </div>
+                    <div class="block container content">
+                        <template x-for="(record, index) in records" :key="index">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-6 block" x-text="getTitle(index)"></p>
+                                    <p class="is-6 block" x-text="getLastModified(index)"></p>
+                                </div>
+                                <div class="media-right field has-addons is-pulled-right">
+                                    <p class="control">
+                                    <a class="button is-link is-outlined" @click="goToEditView(index)"><i
+                                            class="gg-pen"></i></a>
+                                    </p>
+                                    <p class="control">
+                                    <a class="button is-danger is-outlined" @click="deleteRecord(index)"><i
+                                            class="gg-trash"></i></a>
+                                    </p>
+                                </div>
+                                </li>
+                        </template>
+                            </div>
+                </article>
+            </template>
+
+            <template x-if="view === 'edit'">
+                <article class="section">
+                    <div class="block">
+                        <h1 class="title" x-html="questions[currentQuestion].title"></h1>
+                        <h2 class="subtitle" x-html="questions[currentQuestion].description"></h2>
+                        <textarea class="textarea" x-model="currentRecord[questions[currentQuestion].model]"
+                            @input="setCurrentModelValue($event.target.value)" @change="changeDetected()">
+                        </textarea>
+                    </div>
+
+                    <div class="block">
+                        <button class="button is-info" @click="previousQuestion()" :disabled="currentQuestion == 0">
+                            <i class="gg-chevron-left"></i> Vissza</button>
+                        <button class="button is-pulled-right is-primary" @click="nextQuestion()"
+                            :disabled="currentQuestion == 7">Tovább <i class="gg-chevron-right"></i></button>
+                    </div>
+
+                    <div class="block">
+                        <a class="button is-warning is-fullwidth" @click="goToListView()">Vissza a bejegyzésekhez</a>
+                    </div>
+                    <div class="block">
+                        <button class="button is-fullwidth is-success" @click="saveRecord()"
+                            x-show="currentQuestion === 7">Mentés</button>
+                    </div>
+                </article>
+            </template>
+            <footer class="footer mt-auto">
+                <p>UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
+            </footer>
+        </main>
+    </body>
+
+</html>
